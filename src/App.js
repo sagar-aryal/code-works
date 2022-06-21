@@ -6,6 +6,9 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import RevolutionPage from "./pages/RevolutionPage";
 import ServicesPage from "./pages/ServicesPage";
+import SoftwarePage from "./pages/SoftwarePage";
+import WebsitePage from "./pages/WebsitePage";
+import MobileAppsPage from "./pages/MobileAppsPage";
 import ContactPage from "./pages/ContactPage";
 import theme from "./styles/Theme";
 
@@ -20,6 +23,7 @@ import {
   Fab,
 } from "@mui/material";
 import { KeyboardArrowUp } from "@mui/icons-material";
+import LoginPage from "./pages/LoginPage";
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -71,7 +75,11 @@ const App = () => {
             <Route path="about" element={<AboutPage />} />
             <Route path="revolution" element={<RevolutionPage />} />
             <Route path="services" element={<ServicesPage />} />
+            <Route path="software" element={<SoftwarePage />} />
+            <Route path="website" element={<WebsitePage />} />
+            <Route path="mobileapps" element={<MobileAppsPage />} />
             <Route path="contact" element={<ContactPage />} />
+            <Route path="login" element={<LoginPage />} />
           </Routes>
         </Container>
 
