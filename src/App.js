@@ -1,6 +1,12 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import RevolutionPage from "./pages/RevolutionPage";
+import ServicesPage from "./pages/ServicesPage";
+import ContactPage from "./pages/ContactPage";
 import theme from "./styles/Theme";
 
 import { ThemeProvider } from "@mui/material/styles";
@@ -54,15 +60,28 @@ function ScrollTop(props) {
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Header />
-      <Toolbar id="back-to-top-anchor" />
-      <Container>Hello</Container>
-      <ScrollTop>
-        <Fab size="small" aria-label="scroll back to top">
-          <KeyboardArrowUp />
-        </Fab>
-      </ScrollTop>
+      <BrowserRouter>
+        <CssBaseline />
+
+        <Header />
+
+        <Container>
+          <Routes>
+            <Route index element={<HomePage />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="revolution" element={<RevolutionPage />} />
+            <Route path="services" element={<ServicesPage />} />
+            <Route path="contact" element={<ContactPage />} />
+          </Routes>
+        </Container>
+
+        <Toolbar id="back-to-top-anchor" />
+        <ScrollTop>
+          <Fab size="small" aria-label="scroll back to top">
+            <KeyboardArrowUp />
+          </Fab>
+        </ScrollTop>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };
