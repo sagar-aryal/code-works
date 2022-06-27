@@ -81,71 +81,60 @@ const Header = () => {
   };
 
   const menuItems = [
-    { name: "Services", link: "/services" },
-    { name: "Software Development", link: "/software" },
-    { name: "Website Development", link: "/website" },
-    { name: "Mobile Apps Development", link: "/mobileapps" },
+    { name: "Services", link: "/services", activeIndex: 3, selectedIndex: 0 },
+    {
+      name: "Software Development",
+      link: "/software",
+      activeIndex: 3,
+      selectedIndex: 1,
+    },
+    {
+      name: "Website Development",
+      link: "/website",
+      activeIndex: 3,
+      selectedIndex: 2,
+    },
+    {
+      name: "Mobile Apps Development",
+      link: "/mobileapps",
+      activeIndex: 3,
+      selectedIndex: 3,
+    },
+  ];
+
+  const routes = [
+    { name: "Home", link: "/", activeIndex: 0 },
+    { name: "About", link: "/about", activeIndex: 1 },
+    { name: "Revolution", link: "/revolution", activeIndex: 2 },
+    {
+      name: "Services",
+      link: "/services",
+      activeIndex: 3,
+      anchorEl: anchorEl ? "simple-menu" : undefined,
+      ariaPopup: anchorEl ? true : undefined,
+      mouseOver: (e) => handleClick(e),
+    },
+    { name: "Contact", link: "/contact", activeIndex: 4 },
   ];
 
   // Active to right tab even after refreshing page
+
   useEffect(() => {
-    switch (window.location.pathname) {
-      case "/":
-        if (value !== 0) {
-          setValue(0);
-        }
-        break;
-
-      case "/about":
-        if (value !== 1) {
-          setValue(1);
-        }
-        break;
-
-      case "/revolution":
-        if (value !== 2) {
-          setValue(2);
-        }
-        break;
-
-      case "/services":
-        if (value !== 3) {
-          setValue(3);
-          setSelectedIndex(0);
-        }
-        break;
-
-      case "/software":
-        if (value !== 3) {
-          setValue(3);
-          setSelectedIndex(1);
-        }
-        break;
-
-      case "/website":
-        if (value !== 3) {
-          setValue(3);
-          setSelectedIndex(2);
-        }
-        break;
-
-      case "/mobileapps":
-        if (value !== 3) {
-          setValue(3);
-          setSelectedIndex(3);
-        }
-        break;
-
-      case "/contact":
-        if (value !== 4) {
-          setValue(4);
-        }
-        break;
-
-      default:
-        break;
-    }
-  }, [value]);
+    [...menuItems, ...routes].forEach((route) => {
+      switch (window.location.pathname) {
+        case `${route.link}`:
+          if (value !== route.activeIndex) {
+            setValue(route.activeIndex);
+          }
+          if (route.selectedIndex && route.selectedIndex !== selectedIndex) {
+            setSelectedIndex(route.selectedIndex);
+          }
+          break;
+        default:
+          break;
+      }
+    });
+  }, [value, menuItems, selectedIndex, routes]);
 
   // For Desktop and large screens
   const tabs = (
@@ -158,24 +147,19 @@ const Header = () => {
         indicatorColor="secondary"
         centered
       >
-        <Tab sx={tabStyles} label="Home" component={Link} to="/" />
-        <Tab sx={tabStyles} label="About" component={Link} to="/about" />
-        <Tab
-          sx={tabStyles}
-          label="Revolution"
-          component={Link}
-          to="/revolution"
-        />
-        <Tab
-          id="basic-button"
-          aria-owns={anchorEl ? "simple-menu" : undefined}
-          aria-haspopup={anchorEl ? true : undefined}
-          onMouseOver={(e) => handleClick(e)}
-          sx={tabStyles}
-          label="Services"
-          component={Link}
-          to="/services"
-        />
+        {routes.map((route) => (
+          <Tab
+            key={route.link}
+            sx={tabStyles}
+            component={Link}
+            label={route.name}
+            to={route.link}
+            aria-owns={route.anchorEl}
+            aria-haspopup={route.ariaPopup}
+            onMouseOver={route.mouseOver}
+          />
+        ))}
+
         <Menu
           sx={menuStyles}
           id="basic-menu"
@@ -210,7 +194,6 @@ const Header = () => {
             </MenuItem>
           ))}
         </Menu>
-        <Tab sx={tabStyles} label="Contact" component={Link} to="/contact" />
       </Tabs>
       <Button
         sx={buttonStyles}
