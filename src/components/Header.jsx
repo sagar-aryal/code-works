@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 // Import components
 import {
+  appBarStyles,
   buttonStyles,
   iconButtonStyles,
   listItemsTextStyles,
@@ -176,6 +177,7 @@ const Header = () => {
           }}
           MenuListProps={{ onMouseLeave: handleClose }}
           elevation={0}
+          keepMounted
         >
           {menuItems.map((items, index) => (
             <MenuItem
@@ -219,75 +221,24 @@ const Header = () => {
         onOpen={() => setOpenDrawer(true)}
       >
         <List disablePadding>
-          <ListItemButton
-            sx={listItemStyles}
-            divider
-            disableRipple
-            component={Link}
-            to="/"
-            onClick={(event) => {
-              setOpenDrawer(false);
-              handleListItemClick(event, 0);
-            }}
-            selected={value === 0}
-          >
-            <ListItemText sx={listItemsTextStyles}> Home</ListItemText>
-          </ListItemButton>
-          <ListItemButton
-            sx={listItemStyles}
-            divider
-            component={Link}
-            to="/about"
-            onClick={(event) => {
-              setOpenDrawer(false);
-              handleListItemClick(event, 1);
-            }}
-            selected={value === 1}
-          >
-            <ListItemText sx={listItemsTextStyles}>About</ListItemText>
-          </ListItemButton>
-          <ListItemButton
-            sx={listItemStyles}
-            divider
-            disableRipple
-            component={Link}
-            to="/revolution"
-            onClick={(event) => {
-              setOpenDrawer(false);
-              handleListItemClick(event, 2);
-            }}
-            selected={value === 2}
-          >
-            <ListItemText sx={listItemsTextStyles}> Revolution</ListItemText>
-          </ListItemButton>
-          <ListItemButton
-            sx={listItemStyles}
-            divider
-            disableRipple
-            component={Link}
-            to="/services"
-            onClick={(event) => {
-              setOpenDrawer(false);
-              handleListItemClick(event, 3);
-            }}
-            selected={value === 3}
-          >
-            <ListItemText sx={listItemsTextStyles}>Services</ListItemText>
-          </ListItemButton>
-          <ListItemButton
-            sx={listItemStyles}
-            divider
-            disableRipple
-            component={Link}
-            to="/contact"
-            onClick={(event) => {
-              setOpenDrawer(false);
-              handleListItemClick(event, 4);
-            }}
-            selected={value === 4}
-          >
-            <ListItemText sx={listItemsTextStyles}>Contact</ListItemText>
-          </ListItemButton>
+          {routes.map((route) => (
+            <ListItemButton
+              key={route.link}
+              sx={listItemStyles}
+              divider
+              disableRipple
+              component={Link}
+              to={route.link}
+              onClick={(event) => {
+                setOpenDrawer(false);
+                handleListItemClick(event, route.activeIndex);
+              }}
+              selected={value === route.activeIndex}
+            >
+              <ListItemText sx={listItemsTextStyles}>{route.name}</ListItemText>
+            </ListItemButton>
+          ))}
+
           <ListItemButton
             sx={[listItemsTextStyles, listItemButtonStyles]}
             divider
@@ -314,7 +265,7 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position="sticky">
+      <AppBar sx={appBarStyles}>
         <Toolbar>
           <Button
             sx={logoContainer}
@@ -327,7 +278,7 @@ const Header = () => {
               CodeWorks
             </Typography>
           </Button>
-          {matches ? drawer : tabs}
+          {matches && matches ? drawer : tabs}
         </Toolbar>
       </AppBar>
     </>

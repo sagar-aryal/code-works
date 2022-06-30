@@ -1,5 +1,10 @@
 import theme from "../styles/Theme";
 
+export const appBarStyles = {
+  position: "sticky",
+  zIndex: theme.zIndex.modal + 1,
+};
+
 export const logoContainer = {
   height: "7rem",
   padding: 0,
@@ -36,6 +41,7 @@ export const tabStyles = {
 };
 
 export const menuStyles = {
+  zIndex: 1302,
   "& .MuiMenu-paper": {
     background: theme.palette.primary.main,
     borderRadius: "0px",
