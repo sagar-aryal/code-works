@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import RevolutionPage from "./pages/RevolutionPage";
@@ -10,7 +10,9 @@ import SoftwarePage from "./pages/SoftwarePage";
 import WebsitePage from "./pages/WebsitePage";
 import MobileAppsPage from "./pages/MobileAppsPage";
 import ContactPage from "./pages/ContactPage";
-import theme from "./styles/Theme";
+import LoginPage from "./pages/LoginPage";
+import Footer from "./components/Footer/Footer";
+import theme from "./theme/Theme";
 
 import { ThemeProvider } from "@mui/material/styles";
 import {
@@ -23,7 +25,6 @@ import {
   Fab,
 } from "@mui/material";
 import { KeyboardArrowUp } from "@mui/icons-material";
-import LoginPage from "./pages/LoginPage";
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -82,6 +83,8 @@ const App = () => {
             <Route path="login" element={<LoginPage />} />
           </Routes>
         </Container>
+
+        <Footer />
 
         <Toolbar id="back-to-top-anchor" />
         <ScrollTop>

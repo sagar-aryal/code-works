@@ -1,4 +1,4 @@
-import theme from "../styles/Theme";
+import theme from "../../theme/Theme";
 
 export const appBarStyles = {
   position: "sticky",
@@ -38,6 +38,9 @@ export const tabStyles = {
   minWidth: "10px",
   marginLeft: "25px",
   color: "whitesmoke",
+  "&: hover": {
+    opacity: 0.6,
+  },
 };
 
 export const menuStyles = {
