@@ -24,6 +24,7 @@ export const gridContainerStyles = {
 };
 
 export const typographyStyles = {
+  fontWeight: 600,
   lineHeight: 1.4,
   color: theme.palette.primary.main,
   marginTop: "20px",

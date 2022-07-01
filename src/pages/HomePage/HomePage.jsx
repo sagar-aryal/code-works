@@ -1,6 +1,6 @@
 import React from "react";
 
-import heroImage from "../../assets/heroImage.png";
+import hero_banner from "../../assets/hero_banner.png";
 
 import { Button, CardMedia, Grid, Typography } from "@mui/material";
 import {
@@ -34,7 +34,7 @@ const HomePage = () => {
           <Grid sm item sx={imageItemStyles}>
             <CardMedia
               component="img"
-              src={heroImage}
+              src={hero_banner}
               alt="Hero Image"
               sx={mediaCardStyles}
             />
