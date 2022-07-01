@@ -3,11 +3,9 @@ import theme from "../../theme/Theme";
 export const imageItemStyles = {
   maxWidth: "350px",
   minWidth: "200px",
+  minHeight: "200px",
   marginTop: "20px",
   marginLeft: "10vw",
-  [theme.breakpoints.down("sm")]: {
-    minHeight: "200px",
-  },
 };
 
 export const mediaCardStyles = {
