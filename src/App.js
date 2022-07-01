@@ -2,15 +2,15 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import RevolutionPage from "./pages/RevolutionPage";
-import ServicesPage from "./pages/ServicesPage";
-import SoftwarePage from "./pages/SoftwarePage";
-import WebsitePage from "./pages/WebsitePage";
-import MobileAppsPage from "./pages/MobileAppsPage";
-import ContactPage from "./pages/ContactPage";
-import LoginPage from "./pages/LoginPage";
+import HomePage from "./pages/HomePage/HomePage";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import RevolutionPage from "./pages/RevolutionPage/RevolutionPage";
+import ServicesPage from "./pages/ServicesPage/ServicesPage";
+import SoftwarePage from "./pages/SoftwarePage/SoftwarePage";
+import WebsitePage from "./pages/WebsitePage/WebsitePage";
+import MobileAppsPage from "./pages/MobileAppsPage/MobileAppsPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 import Footer from "./components/Footer/Footer";
 import theme from "./theme/Theme";
 
