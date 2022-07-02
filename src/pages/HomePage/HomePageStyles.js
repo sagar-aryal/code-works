@@ -17,16 +17,11 @@ export const mediaCardStyles = {
 export const homeContainerStyles = {
   color: theme.palette.secondary.main,
   marginTop: "2rem",
+  marginBottom: "2rem",
 
   [theme.breakpoints.down("sm")]: {
     fontSize: "10px",
   },
-};
-
-export const typographyStyles = {
-  fontWeight: 600,
-  lineHeight: 1.4,
-  color: theme.palette.primary.main,
 };
 
 export const buttonStyles = {

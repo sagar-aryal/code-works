@@ -11,11 +11,8 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import {
-  headingStyles,
   learnButtonStyles,
   serviceContainer,
-  SpecialText,
-  subtitleStyles,
 } from "../ServicesPage/ServicesPageStyles";
 
 const WebsitePage = () => {
@@ -25,10 +22,8 @@ const WebsitePage = () => {
       <Container sx={serviceContainer}>
         <Grid container justifyContent={matchSM ? "center" : "flex-end"}>
           <Grid item>
-            <Typography sx={headingStyles} variant="h5">
-              Website Development
-            </Typography>
-            <Typography sx={subtitleStyles} variant="subtitle1">
+            <Typography variant="h5">Website Development</Typography>
+            <Typography variant="subtitle1">
               Reach More. Discover More. Sell More
             </Typography>
             <Typography variant="subtitle1">

@@ -11,10 +11,8 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import {
-  headingStyles,
   learnButtonStyles,
   serviceContainer,
-  subtitleStyles,
 } from "../ServicesPage/ServicesPageStyles";
 
 const MobileAppsPage = () => {
@@ -24,10 +22,8 @@ const MobileAppsPage = () => {
       <Container sx={serviceContainer}>
         <Grid container justifyContent={matchSM ? "center" : "undefined"}>
           <Grid item>
-            <Typography sx={headingStyles} variant="h5">
-              Mobile Development
-            </Typography>
-            <Typography sx={subtitleStyles} variant="subtitle1">
+            <Typography variant="h5">Mobile Development</Typography>
+            <Typography variant="subtitle1">
               Extend Functionality. Extend Access. Extend Engagement.
             </Typography>
             <Typography variant="subtitle1">

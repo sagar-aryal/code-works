@@ -9,7 +9,6 @@ import {
   homeContainerStyles,
   imageItemStyles,
   mediaCardStyles,
-  typographyStyles,
 } from "./HomePageStyles";
 
 const HomePage = () => {
@@ -20,7 +19,7 @@ const HomePage = () => {
           <Grid item>
             <Grid container>
               <Grid item sx={gridItemStyles}>
-                <Typography sx={typographyStyles} variant="h4">
+                <Typography variant="h3">
                   Bringing <br />
                   Technologies Together
                 </Typography>
