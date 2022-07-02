@@ -33,8 +33,20 @@ const theme = createTheme({
       fontWeight: 700,
       color: "#008394",
     },
+    h6: {
+      fontFamily: "Raleway",
+      fontSize: "1.25rem",
+      fontWeight: 700,
+      color: "#008394",
+    },
     subtitle1: {
       fontSize: "1.1rem",
+      fontWeight: 300,
+      color: "#8e8e8e",
+      lineHeight: 1.5,
+    },
+    body1: {
+      fontSize: "1rem",
       fontWeight: 300,
       color: "#8e8e8e",
       lineHeight: 1.5,
