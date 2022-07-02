@@ -2,23 +2,24 @@ import React from "react";
 
 import hero_banner from "../../assets/hero_banner.png";
 
-import { Button, CardMedia, Grid, Typography } from "@mui/material";
+import { Button, CardMedia, Grid, Typography, Container } from "@mui/material";
 import {
   buttonStyles,
+  gridItemStyles,
+  homeContainerStyles,
   imageItemStyles,
   mediaCardStyles,
   typographyStyles,
 } from "./HomePageStyles";
-import { Container } from "@mui/system";
 
 const HomePage = () => {
   return (
     <React.Fragment>
-      <Container>
+      <Container sx={homeContainerStyles}>
         <Grid container justifyContent="center" alignItems="center">
           <Grid item>
             <Grid container>
-              <Grid item>
+              <Grid item sx={gridItemStyles}>
                 <Typography sx={typographyStyles} variant="h4">
                   Bringing <br />
                   Technologies Together

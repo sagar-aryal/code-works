@@ -14,9 +14,9 @@ export const mediaCardStyles = {
   objectFit: "contain",
 };
 
-export const gridContainerStyles = {
+export const homeContainerStyles = {
   color: theme.palette.secondary.main,
-  marginTop: "20px",
+  marginTop: "2rem",
 
   [theme.breakpoints.down("sm")]: {
     fontSize: "10px",
@@ -27,11 +27,17 @@ export const typographyStyles = {
   fontWeight: 600,
   lineHeight: 1.4,
   color: theme.palette.primary.main,
-  marginTop: "20px",
 };
 
 export const buttonStyles = {
   color: theme.palette.secondary.main,
   marginTop: "20px",
   marginBottom: "20px",
+};
+
+export const gridItemStyles = {
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "10px",
+    textAlign: "center",
+  },
 };

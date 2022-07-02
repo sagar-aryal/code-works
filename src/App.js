@@ -21,7 +21,6 @@ import {
   Box,
   CssBaseline,
   Toolbar,
-  Container,
   Fab,
 } from "@mui/material";
 import { KeyboardArrowUp } from "@mui/icons-material";
@@ -70,19 +69,17 @@ const App = () => {
 
         <Header />
 
-        <Container>
-          <Routes>
-            <Route index element={<HomePage />} />
-            <Route path="about" element={<AboutPage />} />
-            <Route path="revolution" element={<RevolutionPage />} />
-            <Route path="services" element={<ServicesPage />} />
-            <Route path="software" element={<SoftwarePage />} />
-            <Route path="website" element={<WebsitePage />} />
-            <Route path="mobileapps" element={<MobileAppsPage />} />
-            <Route path="contact" element={<ContactPage />} />
-            <Route path="login" element={<LoginPage />} />
-          </Routes>
-        </Container>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="revolution" element={<RevolutionPage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="software" element={<SoftwarePage />} />
+          <Route path="website" element={<WebsitePage />} />
+          <Route path="mobileapps" element={<MobileAppsPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="login" element={<LoginPage />} />
+        </Routes>
 
         <Footer />
 
