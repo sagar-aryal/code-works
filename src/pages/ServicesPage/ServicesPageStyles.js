@@ -3,7 +3,6 @@ import theme from "../../theme/Theme";
 
 export const serviceContainer = {
   marginTop: "2rem",
-  marginBottom: "2rem",
 };
 
 export const SpecialText = styled("span")({
