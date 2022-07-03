@@ -17,6 +17,7 @@ import {
   Container,
   useMediaQuery,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
   const matchSM = useMediaQuery(theme.breakpoints.down("sm"));
@@ -45,7 +46,12 @@ const ServicesPage = () => {
                   Complete digital solutions, from investigation to{" "}
                   <SpecialText>Celebration</SpecialText>
                 </Typography>
-                <Button sx={learnButtonStyles} variant="contained">
+                <Button
+                  sx={learnButtonStyles}
+                  variant="contained"
+                  component={Link}
+                  to="/software"
+                >
                   Learn More
                 </Button>
               </Grid>
@@ -74,7 +80,12 @@ const ServicesPage = () => {
                 <Typography variant="subtitle1">
                   Optimize for Search Engines, built for speed.
                 </Typography>
-                <Button sx={learnButtonStyles} variant="contained">
+                <Button
+                  sx={learnButtonStyles}
+                  variant="contained"
+                  component={Link}
+                  to="/website"
+                >
                   Learn More
                 </Button>
               </Grid>
@@ -105,7 +116,12 @@ const ServicesPage = () => {
                   Integrate your web experience or create a standalone app{" "}
                   {matchSM ? null : <br />} with either mobile platform.
                 </Typography>
-                <Button sx={learnButtonStyles} variant="contained">
+                <Button
+                  sx={learnButtonStyles}
+                  variant="contained"
+                  component={Link}
+                  to="/mobileapps"
+                >
                   Learn More
                 </Button>
               </Grid>
