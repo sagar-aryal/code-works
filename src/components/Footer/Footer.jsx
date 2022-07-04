@@ -52,11 +52,11 @@ const Footer = () => {
             <Item item component={Link} to="/services">
               Services
             </Item>
-            <Item item component={Link} to="/website">
-              Website Development
-            </Item>
             <Item item component={Link} to="/software">
               Software Development
+            </Item>
+            <Item item component={Link} to="/website">
+              Website Development
             </Item>
             <Item item component={Link} to="/mobileapps">
               Mobile Apps Development
