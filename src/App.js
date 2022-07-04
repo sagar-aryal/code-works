@@ -81,14 +81,14 @@ const App = () => {
           <Route path="login" element={<LoginPage />} />
         </Routes>
 
-        <Footer />
-
         <Toolbar id="back-to-top-anchor" />
         <ScrollTop>
           <Fab size="small" aria-label="scroll back to top">
             <KeyboardArrowUp />
           </Fab>
         </ScrollTop>
+
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );

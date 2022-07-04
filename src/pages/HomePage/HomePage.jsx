@@ -1,6 +1,10 @@
 import React from "react";
 
 import hero_banner from "../../assets/hero_banner.png";
+import AboutPage from "../AboutPage/AboutPage";
+import RevolutionPage from "../RevolutionPage/RevolutionPage";
+import ServicesPage from "../ServicesPage/ServicesPage";
+import ContactPage from "../ContactPage/ContactPage";
 
 import { Button, CardMedia, Grid, Typography, Container } from "@mui/material";
 import {
@@ -41,6 +45,10 @@ const HomePage = () => {
           </Grid>
         </Grid>
       </Container>
+      <AboutPage />
+      <RevolutionPage />
+      <ServicesPage />
+      <ContactPage />
     </React.Fragment>
   );
 };

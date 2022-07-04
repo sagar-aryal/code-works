@@ -5,7 +5,7 @@ import lightbulb from "../../assets/lightbulb.png";
 import cash from "../../assets/cash.png";
 import watch from "../../assets/watch.png";
 
-import { Grid, IconButton, Typography, Container } from "@mui/material";
+import { Grid, IconButton, Typography, Container, Hidden } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
@@ -15,15 +15,17 @@ const SoftwarePage = () => {
       <Container>
         <Grid container direction="column">
           <Grid item container>
-            <Grid item style={{ marginRight: "1rem", marginLeft: "-3rem" }}>
-              <IconButton
-                style={{ backgroundColor: "transparent" }}
-                component={Link}
-                to="/services"
-              >
-                <ArrowBack sx={iconStyles} />
-              </IconButton>
-            </Grid>
+            <Hidden mdDown>
+              <Grid item style={{ marginRight: "1rem", marginLeft: "-3rem" }}>
+                <IconButton
+                  style={{ backgroundColor: "transparent" }}
+                  component={Link}
+                  to="/services"
+                >
+                  <ArrowBack sx={iconStyles} />
+                </IconButton>
+              </Grid>
+            </Hidden>
             <Grid
               item
               container
@@ -58,15 +60,17 @@ const SoftwarePage = () => {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid item style={{ marginRight: "-3rem", marginLeft: "1rem" }}>
-              <IconButton
-                style={{ backgroundColor: "transparent" }}
-                component={Link}
-                to="/Website"
-              >
-                <ArrowForward sx={iconStyles} />
-              </IconButton>
-            </Grid>
+            <Hidden mdDown>
+              <Grid item style={{ marginRight: "-3rem", marginLeft: "1rem" }}>
+                <IconButton
+                  style={{ backgroundColor: "transparent" }}
+                  component={Link}
+                  to="/Website"
+                >
+                  <ArrowForward sx={iconStyles} />
+                </IconButton>
+              </Grid>
+            </Hidden>
           </Grid>
           <Grid
             item

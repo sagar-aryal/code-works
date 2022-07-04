@@ -12,7 +12,7 @@ const RevolutionPage = () => {
         container
         justifyContent="center"
         alignItems="center"
-        style={{ height: "80vh" }}
+        style={{ height: "80vh", marginTop: "4rem", marginBottom: "4rem" }}
       >
         <Card sx={cardStyles}>
           <CardContent>

@@ -16,8 +16,8 @@ export const mediaCardStyles = {
 
 export const homeContainerStyles = {
   color: theme.palette.secondary.main,
-  marginTop: "2rem",
-  marginBottom: "2rem",
+  marginTop: "4rem",
+  marginBottom: "4rem",
 
   [theme.breakpoints.down("sm")]: {
     fontSize: "10px",
