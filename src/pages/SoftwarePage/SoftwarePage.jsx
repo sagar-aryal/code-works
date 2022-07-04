@@ -1,9 +1,13 @@
 import React from "react";
 
 import { iconStyles, softwareContainerStyles } from "./SoftwareStyles";
+import lightbulb from "../../assets/lightbulb.png";
+import cash from "../../assets/cash.png";
+import watch from "../../assets/watch.png";
 
 import { Grid, IconButton, Typography, Container } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const SoftwarePage = () => {
   return (
@@ -11,8 +15,12 @@ const SoftwarePage = () => {
       <Container>
         <Grid container direction="column">
           <Grid item container>
-            <Grid item>
-              <IconButton style={{ backgroundColor: "transparent" }}>
+            <Grid item style={{ marginRight: "1rem", marginLeft: "-3rem" }}>
+              <IconButton
+                style={{ backgroundColor: "transparent" }}
+                component={Link}
+                to="/services"
+              >
                 <ArrowBack sx={iconStyles} />
               </IconButton>
             </Grid>
@@ -50,10 +58,71 @@ const SoftwarePage = () => {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid item>
-              <IconButton style={{ backgroundColor: "transparent" }}>
+            <Grid item style={{ marginRight: "-3rem", marginLeft: "1rem" }}>
+              <IconButton
+                style={{ backgroundColor: "transparent" }}
+                component={Link}
+                to="/Website"
+              >
                 <ArrowForward sx={iconStyles} />
               </IconButton>
+            </Grid>
+          </Grid>
+          <Grid
+            item
+            container
+            justify="center"
+            style={{ marginTop: "5rem", marginBottom: "5rem" }}
+          >
+            <Grid
+              item
+              container
+              direction="column"
+              alignItems="center"
+              md
+              style={{ maxWidth: "40rem" }}
+            >
+              <Grid item>
+                <Typography variant="h5">Save Energy</Typography>
+              </Grid>
+              <Grid item>
+                <img
+                  src={lightbulb}
+                  alt="lightbulb"
+                  width="150px"
+                  height="150px"
+                />
+              </Grid>
+            </Grid>
+            <Grid
+              item
+              container
+              direction="column"
+              alignItems="center"
+              md
+              style={{ maxWidth: "40rem" }}
+            >
+              <Grid item>
+                <Typography variant="h5">Save Time</Typography>
+              </Grid>
+              <Grid item>
+                <img src={watch} alt="lightbulb" width="150px" height="150px" />
+              </Grid>
+            </Grid>
+            <Grid
+              item
+              container
+              direction="column"
+              alignItems="center"
+              md
+              style={{ maxWidth: "40rem" }}
+            >
+              <Grid item>
+                <Typography variant="h5">Save Money</Typography>
+              </Grid>
+              <Grid item>
+                <img src={cash} alt="lightbulb" width="150px" height="150px" />
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
