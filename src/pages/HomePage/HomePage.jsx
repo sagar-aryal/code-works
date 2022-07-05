@@ -2,7 +2,7 @@ import React from "react";
 
 import hero_banner from "../../assets/hero_banner.png";
 import AboutPage from "../AboutPage/AboutPage";
-import RevolutionPage from "../RevolutionPage/RevolutionPage";
+import Revolution from "../../components/Revolution/Revolution";
 import ServicesPage from "../ServicesPage/ServicesPage";
 import ContactPage from "../ContactPage/ContactPage";
 
@@ -46,7 +46,7 @@ const HomePage = () => {
         </Grid>
       </Container>
       <AboutPage />
-      <RevolutionPage />
+      <Revolution />
       <ServicesPage />
       <ContactPage />
     </React.Fragment>
