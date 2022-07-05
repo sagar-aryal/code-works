@@ -57,7 +57,7 @@ const MobileAppsPage = () => {
                 <IconButton
                   style={{ backgroundColor: "transparent" }}
                   component={Link}
-                  to="/contact"
+                  to="/services"
                 >
                   <ArrowForward sx={iconStyles} />
                 </IconButton>
