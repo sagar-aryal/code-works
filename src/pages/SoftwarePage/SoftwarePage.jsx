@@ -14,7 +14,7 @@ const SoftwarePage = () => {
     <React.Fragment>
       <Container>
         <Grid container direction="column">
-          <Grid item container>
+          <Grid item container justifyContent="center">
             <Hidden mdDown>
               <Grid item style={{ marginRight: "1rem", marginLeft: "-3rem" }}>
                 <IconButton
@@ -76,12 +76,13 @@ const SoftwarePage = () => {
             item
             container
             justify="center"
-            style={{ marginTop: "5rem", marginBottom: "5rem" }}
+            style={{ marginTop: "8rem", marginBottom: "8rem" }}
           >
             <Grid
               item
               container
               direction="column"
+              justifyContent="center"
               alignItems="center"
               md
               style={{ maxWidth: "40rem" }}
