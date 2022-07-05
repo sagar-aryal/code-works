@@ -14,9 +14,9 @@ const SoftwarePage = () => {
     <React.Fragment>
       <Container>
         <Grid container direction="column">
-          <Grid item container justifyContent="center">
+          <Grid item container>
             <Hidden mdDown>
-              <Grid item style={{ marginRight: "1rem", marginLeft: "-3rem" }}>
+              <Grid item style={{ marginRight: "1rem" }}>
                 <IconButton
                   style={{ backgroundColor: "transparent" }}
                   component={Link}
@@ -61,7 +61,7 @@ const SoftwarePage = () => {
               </Grid>
             </Grid>
             <Hidden mdDown>
-              <Grid item style={{ marginRight: "-3rem", marginLeft: "1rem" }}>
+              <Grid item style={{ marginLeft: "1rem" }}>
                 <IconButton
                   style={{ backgroundColor: "transparent" }}
                   component={Link}
