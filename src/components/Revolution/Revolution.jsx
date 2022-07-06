@@ -1,10 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import revolutionBackground from "../../assets/revolution.jpg";
 import { cardStyles, revolutionBtnStyles } from "./RevolutionStyles";
 
 import { Button, Card, CardContent, Grid, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
 
 const RevolutionPage = () => {
   return (

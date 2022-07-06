@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import software_development from "../../assets/software_development.png";
 import website_development from "../../assets/website_development.png";
@@ -17,7 +18,6 @@ import {
   Container,
   useMediaQuery,
 } from "@mui/material";
-import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
   const matchSM = useMediaQuery(theme.breakpoints.down("sm"));

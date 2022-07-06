@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { iconStyles, softwareContainerStyles } from "./SoftwareStyles";
 import lightbulb from "../../assets/lightbulb.png";
@@ -7,7 +8,6 @@ import watch from "../../assets/watch.png";
 
 import { Grid, IconButton, Typography, Container, Hidden } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
-import { Link } from "react-router-dom";
 
 const SoftwarePage = () => {
   return (
